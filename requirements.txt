@@ -6,4 +6,4 @@ psycopg2-binary
 python-dotenv
 sqlparse
 tzdata
-flake8
+Pillow
