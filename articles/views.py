@@ -10,6 +10,7 @@ def articles_list(request):
     context = {'object_list': articles}
     return render(request, template, context)
 
+
 def cicd(request):
     current_time = 'сегодня'
     msg = f'Текущее время: {current_time}'
