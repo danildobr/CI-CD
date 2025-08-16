@@ -12,6 +12,6 @@ def articles_list(request):
 
 
 def cicd(request):
-    current_time = 'сегодня, новая версия'
+    current_time = 'сегодня, новая версия, лучше предыдущей'
     msg = f'Текущее время: {current_time}'
     return HttpResponse(msg)
