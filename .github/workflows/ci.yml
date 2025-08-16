@@ -53,11 +53,10 @@ jobs:
           DB_PORT: 5432
           ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
 
-          - name: Деплой 
-            user: appleboy/ssh-actions@master
-              with: 
-                host: ${{ secrets.SSH_HOST }}  #ип сервера
-                username: ${{ secrets.SSH_USER }}
-                password: ${{ secrets.SSH_PASSWORD }}
-                script:  expect /home/cicddanil/m2m-relations/deploy.exp
-
+      - name: Деплой
+        uses: appleboy/ssh-action@master
+        with: 
+          host: ${{ secrets.SSH_HOST }}  # ip сервера
+          username: ${{ secrets.SSH_USER }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: expect /home/cicddanil/m2m-relations/deploy.exp
